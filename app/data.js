@@ -32,7 +32,7 @@ export const items = [
     blurb: "I love the 'Ex' track because she perfectly captures the messy, heartbreaking cycle of a toxic relationship that you just can't seem to break away from.",
     rating: 4,
     emoji: "✨ ",
-    image:"/nikita.jpeg"
+    image:my-"/nikitakering.jpeg"
   },
   
   {

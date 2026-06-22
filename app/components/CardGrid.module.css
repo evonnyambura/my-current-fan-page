@@ -1,7 +1,7 @@
 /* app/components/Card.module.css */
 .grid {
   display: grid;
-  grid-template-columns: repeat(5, auto);
+ 
   gap: 1.5rem;
   margin-top: 2rem;
   
