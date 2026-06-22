@@ -1,0 +1,75 @@
+.card {
+  background: white;
+  border-radius: 16px;
+  padding: 1.0rem;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+  color: black;
+  
+  width: 100%; 
+  height: 100%;
+  aspect-ratio: 1 / 1.65; 
+
+  /* REQUIRED: Turns the card into a flex column to force alignment */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; 
+  overflow:hidden;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 24px rgba(223, 219, 219, 0.12);
+}
+
+.image {
+  border-radius: 20px;
+  box-shadow: 0 12px 25px rgb(214, 44, 6);
+  width: 100% !important;
+  display: block;
+
+  /* FIXED: Locks all images to the exact same square aspect ratio and height */
+  aspect-ratio: 1 / 1;
+  object-fit: cover; 
+  margin-bottom: 1rem;
+}
+
+/* 
+   If your titles (Rihanna, Fifth Harmony, etc.) use a tag like h3 or a class,
+   make sure they have a shared class name. Let's assume it's called .title:
+*/
+.title {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+/* 
+   If your paragraphs use a class or tag, wrap them or target them. 
+   This forces the description text container to absorb all remaining space, 
+   pushing the star ratings to the absolute bottom of the cards together!
+*/
+.card p {
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.4;
+  
+  /* FIXED: Pushes anything below this tag (like the stars) down to the bottom */
+  flex-grow: 1; 
+  
+  /* OPTIONAL: Truncates extra text with ellipses if it gets too long for the card size */
+  display: -webkit-box;
+  -webkit-line-clamp: 4; /* Maximum lines allowed before hiding text */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.stars { 
+  color: #f5a623; 
+  margin-top: auto; /* Guarantees stars stick to the very bottom alignment line */
+  padding-top: 0.5rem;
+}
+
+.emoji { font-size: 2rem; }
+
